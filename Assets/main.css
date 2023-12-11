@@ -1,0 +1,394 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  font-size: 24px;
+  text-align: center;
+}
+
+/*start of navbar*/
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  height: 100px;
+}
+
+.navbarContainer .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbarContainer .logo {
+  height: 50px;
+  margin-right: 1rem;
+}
+
+.navbarContainer .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbarContainer .nav-item {
+  padding: 0.5rem 1rem;
+}
+
+.navbarContainer .nav-item a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbarContainer .nav-item a:hover {
+  color: #007bff;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .navbarContainer {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navbarContainer .nav-links {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbarContainer .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbarContainer .logo {
+    margin-bottom: 1rem;
+  }
+}
+/*end of navbar*/
+
+/*home section*/
+#home {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 3%;
+}
+
+/*Carousel*/
+.carousel-container {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 600px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 200px;
+}
+
+.carousel-item {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.toDoListButton a {
+  background-color: #ffffff;
+  color: #333333;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #333333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 120px;
+  margin-bottom: 130px;
+}
+
+.toDoListButton a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+#homeButton:hover {
+  background-color: rgb(245, 245, 245);
+  border: 4px solid rgb(38, 38, 38);
+  padding: 25px;
+}
+/*end of home section*/
+
+/*toDo List section*/
+#toDoList {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5%;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: flex-start;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  border-radius: 20px;
+}
+
+#toDoList h1 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#editable-header {
+  padding: 4px;
+  cursor: text;
+}
+
+#editable-header:focus {
+  border-color: #88f;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #fff;
+  flex: 0 0 calc(50% - 40px);
+  max-width: calc(50% - 40px);
+  box-sizing: border-box;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.newTask {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.taskBtn {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.taskBtn:hover {
+  background-color: #218838;
+}
+
+.taskList {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+.task-item {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.task-checkbox {
+  margin-right: 10px;
+}
+
+.task-label {
+  flex-grow: 1;
+}
+
+.task-label.completed {
+  text-decoration: line-through;
+}
+
+.delete-task-btn {
+  width: 90px;
+  padding: 5px 10px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-task-btn:hover {
+  background-color: #d9534f;
+}
+
+.add-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 70px auto;
+  font-size: 24px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.add-container:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/*schedule section*/
+#schedule input {
+  border: none;
+  outline: none;
+}
+
+#schedule h2 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.table {
+  text-align: center;
+  padding-left: 19%;
+  max-width: 100px;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+/*end of schedule section*/
+
+/*footer*/
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 2px 0px 2px 10px;
+  width: 99.5%;
+  background-color: #333;
+  color: white;
+  font-size: 15px;
+}
+/*end of footer*/
+
+/* Responsive Design Adjustments */
+
+@media (min-width: 576px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbarContainer a {
+    float: none;
+    display: inline;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 24px;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #dddddd;
+}
+
+table th {
+  background-color: #f8f8f8;
+  color: #333333;
+}
+
+table tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Ensuring the table is responsive */
+@media screen and (max-width: 768px) {
+  table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+  }
+
+  .table-container {
+    height: auto;
+    padding: 10px;
+
+    table th,
+    table td {
+      padding: 8px;
+    }
+  }
+}

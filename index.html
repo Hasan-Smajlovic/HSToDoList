@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ToDo List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="/Assets/main.css">
+</head>
+
+<body>
+    <!--Start of Navbar-->
+    <div class="navbarContainer">
+        <div class="logo-container">
+            <img class="logo" src="/photos/logo.svg" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <div class="nav-item">
+                <a href="#toDoList">ToDo List</a>
+            </div>
+            <div class="nav-item">
+                <a href="#schedule">Schedule</a>
+            </div>
+            <div class="nav-item">
+                <a href="#information">Information</a>
+            </div>
+        </div>
+    </div>
+    <!-- End of Navbar -->
+    <section id="home">
+        <!--Start of Carousel-->
+        <div class="carousel-container" id="myCarousel">
+            <div class="carousel">
+                <div class="carousel-item">
+                    <p>“I find the harder I work the more I
+                        have of
+                        it.” — Thomas Jefferson</p>
+                </div>
+                <div class="carousel-item">
+                    <p>“Either you run the day or the day runs you. — Jim John“</p>
+                </div>
+                <div class="carousel-item">
+                    <p>“Setting goals is the first step in turning the invisible into the visible.”
+                        — Tony
+                        Robbins</p>
+                </div>
+            </div>
+        </div>
+        <!--End of Carousel-->
+        <div class="toDoListButton">
+            <a id="homeButton" href="#toDoList"> Start with your list </a> <!--Button at Home Page-->
+        </div>
+    </section>
+
+    <section id="toDoList">
+        <h1> Start making your list! </h1>
+        <div class="container">
+            <h1 contenteditable="true" class="editable-header">Todo List</h1>
+            <div class="input-container">
+                <input type="text" id="newTask1" class="newTask" placeholder="Add a new task...">
+                <button class="taskBtn" onclick="addTask('newTask1', 'taskList1')">Add Task</button>
+            </div>
+            <ul id="taskList1" class="taskList">
+                <li class="task-item">
+                    <input type="checkbox" class="task-checkbox" id="task1-1" onclick="toggleTaskStatus(this)">
+                    <label for="task1-1" class="task-label" contenteditable="true"
+                    onclick="preventCheckboxTrigger(event)">Example task 1</label>
+                    <button class="delete-task-btn" onclick="this.parentNode.remove();">Delete</button>
+                </li>
+                <li class="task-item">
+                    <input type="checkbox" class="task-checkbox" id="task1-2" onclick="toggleTaskStatus(this)">
+                    <label for="task1-2" class="task-label" contenteditable="true"
+                        onclick="preventCheckboxTrigger(event)">Example task 2</label>
+                    <button class="delete-task-btn" onclick="this.parentNode.remove();">Delete</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <h1 contenteditable="true" class="editable-header">Todo List</h1>
+            <div class="input-container">
+                <input type="text" id="newTask2" class="newTask" placeholder="Add a new task...">
+                <button class="taskBtn" onclick="addTask('newTask2', 'taskList2')">Add Task</button>
+            </div>
+            <ul id="taskList2" class="taskList">
+                <li class="task-item">
+                    <input type="checkbox" class="task-checkbox" id="task2-1" onclick="toggleTaskStatus(this)">
+                    <label for="task2-1" class="task-label" contenteditable="true"
+                        onclick="preventCheckboxTrigger(event)">Example task 1</label>
+                    <button class="delete-task-btn" onclick="this.parentNode.remove();">Delete</button>
+                </li>
+                <li class="task-item">
+                    <input type="checkbox" class="task-checkbox" id="task2-2" onclick="toggleTaskStatus(this)">
+                    <label for="task2-2" class="task-label" contenteditable="true"
+                        onclick="preventCheckboxTrigger(event)">Example task 2</label>
+                    <button class="delete-task-btn" onclick="this.parentNode.remove();">Delete</button>
+                </li>
+            </ul>
+        </div>
+        <button class="add-container" onclick="addContainer()">+</button> <!-- Button to add extra containers -->
+    </section>
+    <!--End of the List Making-->
+
+    <footer>
+        <section id="information">
+            <div class="footerContainer">
+                <div class="footer">
+                    <div class="footerContent">
+                        <h3>Contact Information</h3>
+                    <p>Email: hsmaster@gmail.com
+                            <p>Phone: +38761529632
+                            <p>Address: Visoko, Bosnia and Herzegovina
+                            <p>Visoko, Zenicko-Dobojski 71300
+                            </p>
+                    </div>
+                </div>
+            </div </section>
+    </footer>
+    <script src="/javascript/index.js"></script>
+</body>
+
+</html>

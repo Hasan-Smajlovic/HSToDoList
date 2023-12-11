@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="/Assets/register.css">
+</head>
+
+<body>
+    <!-- Beginning of the Signup/Login form  -->
+    <form>
+        <!-- Beginning of the Register form -->
+        <div class="registerBox" id="registerForm">
+            <h1> Sign up </h1>
+            <input id="firstName" type="text" placeholder="First name" min="5" max="50" required>
+            <label for="firstName"> </label>
+            <input id="lastName" type="text" placeholder="Last name" required>
+            <label for="lastName"> </label>
+            <input id="password" type="password" placeholder="Password" required><br>
+            <label for="password"> </label>
+            <input id="phone" type="text" placeholder="Phone number" required><br>
+            <label for="phone"> </label>
+            <br><button class="formBtn" type="button" onclick="checkInformation()"> Register </button>
+            <br>
+            <br><button class="formBtn" type="button" onclick="switchForm('loginForm')"> Log in </button>
+        </div>
+        <!-- End of Register form -->
+
+        <!-- Beginning of the Login form -->
+        <div class="registerBox" id="loginForm" style="display: none;">
+            <h1> Log in </h1>
+            <input id="loginEmail" type="email" placeholder="E-mail" required><br>
+            <label for="loginEmail"> </label>
+            <input id="loginPassword" type="password" placeholder="Password" required><br>
+            <label for="loginPassword"> </label>
+
+            <br><button class="formBtn" type="button" onclick="checkLoginInformation()" href="index.html"> Log in </button>
+            <br>
+            <br><button class="formBtn" type="button" onclick="switchForm('registerForm')"> Register </button>
+        </div>
+        <!-- End of Login form -->
+    </form>
+    <!-- End of the Signup/Login form  -->
+<script src="/javascript/register.js"></script>
+
+
+</body>
+
+</html>
